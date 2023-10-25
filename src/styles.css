@@ -1,0 +1,75 @@
+body {
+  /* DARK MODE */
+/* COMMENT OUT FOR FINAL THEME!!! */
+
+  background: linear-gradient( to bottom, #000000, #1b014f);
+  color: aliceblue;
+
+/* LIGHT MODE */
+/* UNCOMMENT FOR FINAL THEME!!! */
+
+  /* background: linear-gradient( to bottom, #92a2ff, #ffd7a6); 
+  color: #000000; */
+
+  overflow: hidden; 
+  font-family: sans-serif;
+  height: 100vh; 
+  margin: 0; 
+}
+
+.brand {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 20px;
+  color: #ffa200;
+  font-size: xx-large;
+  font-family: monospace;
+  padding-left: 20px;
+}
+
+.brand:hover {
+  color: white;
+}
+
+.header {
+  display: flex;
+  /* justify-content: flex-end; */
+  column-gap: 20px;
+  background-color: #4200c5;
+  color: white;
+  font-family: sans-serif;
+  padding: 0px;
+  min-width: 2000px;
+  border-radius: 50px;
+  border-top: #ffffff 1px solid;
+  border-bottom: #ffa200 1px solid;
+}
+
+.header:hover {
+  color: #ffa200;
+}
+
+.button {
+  background-color: #7692FF;
+  color: #060d26;
+  border: #452a8e 6px double;
+  border-radius: 5px;
+  margin: 10px 5px 10px 0px;
+
+}
+
+.sidebar {
+  width: 120px;
+  margin: 5px;
+  top: 60px;
+  align-self: flex-start;
+  align-items: start;
+  padding-top: 10px;
+ row-gap: 10px;
+ border-right: #ffa200 1px dashed;
+ max-height: 2000px;
+}
+
+.sidebar:hover {
+  color: #ffa200;
+}
