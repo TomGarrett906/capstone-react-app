@@ -1,0 +1,36 @@
+import { useEffect, navigate } from "react";
+
+import Container from "react-bootstrap/Container";
+import Stack from "react-bootstrap/Stack";
+import Heading from "./components/Heading";
+
+import Users from "./components/Users";
+import Gigs from "./components/Gigs";
+
+import LogInForm from "./forms/LoginForm";
+
+
+
+export default function Register() {
+  useEffect(()=>{
+    if(localStorage.getItem('token') ){
+      navigate('/')
+    }})
+  return (
+    <Container>
+      <Heading />
+      <Stack direction="horizontal">
+        
+     
+        <div>
+          <LogInForm />
+        <Users />
+        <Gigs />
+        </div>
+      </Stack>
+      
+    </Container>
+  );
+}
+
+

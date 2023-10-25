@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 export default function Gigs() {
+    const [getGig, setGig] = useState("");
+
+
     const gigs = [
       "Club Z",
       "City Park Amphitheater",
@@ -9,12 +14,24 @@ export default function Gigs() {
     ];
   
     return (
-      <>
-        <h3>Gigs:</h3>
-        {gigs.map((gig, i) => {
-          return <p key={i}>{gig}</p>;
-        })}
+        <>
+      
+        <button
+          className="button"
+          onClick={() => {
+            const gigIndex = Math.floor(Math.random() * gigs.length);
+            setGig(gigs[gigIndex]);
+          }}
+        >
+          Get Gig
+        </button>
+  
+        <p>Gig: {getGig}</p>
       </>
     );
   }
+  
+
+ 
+
   

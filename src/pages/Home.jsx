@@ -1,21 +1,10 @@
-import Body from "react-bootstrap/Body";
-import Users from "./components/Users";
-import Gigs from "./components/Gigs";
-import Sidebar from "./components/Sidebar";
+import Body from "../components/Body"
 
 
 export default function Home() {
-    return (
-        <Body sidebar={true}>
-        
-        <Sidebar />
-       
-        <Users />
-        <Gigs />
-        
-      </Body>
-
-    )
-  }
-  
-  
+  return (
+    <Body sidebar={true}>
+    
+</Body>
+  )
+}

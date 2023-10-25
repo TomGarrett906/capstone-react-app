@@ -1,32 +1,30 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Stack from "react-bootstrap/Stack";
 import Heading from "./components/Heading";
-import Users from "./components/Users";
-import Gigs from "./components/Gigs";
-import Sidebar from "./components/Sidebar";
-
+import RegisterForm from "./components/forms/RegisterForm";
+import MyGigs from "./pages/MyGigs";
+import EditGigs from "./pages/EditGigs";
+import LandingPage from "./pages/LandingPage";
+import LogInForm from "./components/forms/LoginForm";
+import Account from "./pages/Account";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <Container>
-      <Heading />
-      <Stack direction="horizontal">
-        
-        <Sidebar />
-        <div>
-        <Users />
-        <Gigs />
-        </div>
-      </Stack>
-      {Object.keys(Users).length > 0 && (
-        <>
-          <h3>Users: </h3>
-          {Object.keys(Users).map((user, i) => (
-            <p key={i}>{user}</p>
-          ))}
-        </>
-      )}
+      <BrowserRouter>
+        <Heading />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/login" element={<LogInForm />} />
+          <Route path="/mygigs" element={<MyGigs />} />
+          <Route path="/editgigs" element={<EditGigs />} />
+          <Route path="/account" element={<Account />} />
+        </Routes>
+     
+      </BrowserRouter>
     </Container>
   );
 }

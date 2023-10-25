@@ -7,7 +7,7 @@ export default function Users() {
 
   return (
     <>
-      <div>Users</div>
+      
       <button
         className="button"
         onClick={() => {

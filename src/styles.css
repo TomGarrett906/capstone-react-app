@@ -1,27 +1,38 @@
+
 body {
-  /* DARK MODE */
-/* COMMENT OUT FOR FINAL THEME!!! */
+  display: flex;
 
-  /* background: linear-gradient( to bottom, #000000, #1b014f);
-  color: aliceblue; */
-
-/* LIGHT MODE */
-/* UNCOMMENT FOR FINAL THEME!!! */
-
-  background: linear-gradient( to bottom, #92a2ff, #ffd7a6); 
+  background: linear-gradient(to bottom, #92a2ff, #ffd7a6);
   color: #000000;
 
-  overflow: hidden; 
+  overflow: hidden;
   font-family: sans-serif;
-  height: 100vh; 
-  margin: 0; 
+  height: 100vh;
+  margin: 0;
 }
 
-/* styles.css */
+
 
 body.dark-mode {
   background: linear-gradient(to bottom, #000000, #1b014f);
   color: rgb(247, 247, 247);
+}
+
+.darkModeButton {
+  position: absolute;
+  right: 20px;
+  justify-self: flex-end;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #ffa200;
+  border-color: #ffa200;
+  margin-left: 25px;
+}
+
+.darkModeButton:hover {
+  color: #ffffff;
+  text-shadow: 0 0 4px black;
+  border-color: #ffffff;
 }
 
 
@@ -30,6 +41,7 @@ body.dark-mode {
   justify-content: flex-start;
   column-gap: 20px;
   color: #ffa200;
+  text-shadow: 0 0 4px black;
   font-size: xx-large;
   font-family: monospace;
   padding-left: 20px;
@@ -37,47 +49,80 @@ body.dark-mode {
 
 .brand:hover {
   color: white;
+  text-shadow: 0 0 4px black;
 }
 
 .header {
   display: flex;
-  /* justify-content: flex-end; */
+  margin-top: 7px;
+  position: relative;
   column-gap: 20px;
-  background-color: #4200c5;
-  color: white;
+  background-color: #4200c59f;
+  color: rgba(255, 255, 255, 0.798);
   font-family: sans-serif;
   padding: 0px;
-  min-width: 2000px;
+  min-width: 1260px;
   border-radius: 50px;
   border-top: #ffffff 1px solid;
   border-bottom: #ffa200 1px solid;
 }
 
 .header:hover {
-  color: #ffa200;
+  color: #ffffff;
+  text-shadow: 0 0 2px black;
 }
 
-.button {
-  background-color: #7692FF;
-  color: #060d26;
-  border: #452a8e 6px double;
+.submitButton {
+  background-color: #ffa200c4;
+  border: #452a8e 2px solid;
   border-radius: 5px;
-  margin: 10px 5px 10px 0px;
+  margin: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 2px black;
+}
 
+.submitButton:hover {
+  background-color: #ffa200;
+  text-shadow: 0 0 3px black;
+}
+
+.description {
+ 
+  margin: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:small;
+  color: #ffffff;
+  padding: 100px;
+  background-image: url('./assets/dj-crowd.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat; 
+  border-radius: 10px;
 }
 
 .sidebar {
-  width: 120px;
+  display: flex;
+  min-width: 120px;
   margin: 5px;
   top: 60px;
   align-self: flex-start;
   align-items: start;
   padding-top: 10px;
- row-gap: 10px;
- border-right: #ffa200 1px dashed;
- max-height: 2000px;
+  row-gap: 10px;
+  border-right: #ffffff 1px dashed;
+  max-height: 2000px;
 }
 
 .sidebar:hover {
   color: #ffa200;
+  text-shadow: 0 0 2px black;
+}
+
+.form {
+  
+  background-color: #4a0fc03b;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  align-items:center;
+
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FiSun, FiMoon } from 'react-icons/fi';
 
 const DarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -15,8 +16,9 @@ const DarkMode = () => {
   };
 
   return (
-    <button className="button" onClick={toggleDarkMode}>
-      {isDarkMode ? 'Darker Mode' : 'Dark Mode'}
+    <button className='darkModeButton' onClick={toggleDarkMode}>
+      {isDarkMode ? <FiSun /> : <FiMoon />}
+      {isDarkMode ? '' : ''}
     </button>
   );
 };
