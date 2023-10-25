@@ -2,20 +2,28 @@ body {
   /* DARK MODE */
 /* COMMENT OUT FOR FINAL THEME!!! */
 
-  background: linear-gradient( to bottom, #000000, #1b014f);
-  color: aliceblue;
+  /* background: linear-gradient( to bottom, #000000, #1b014f);
+  color: aliceblue; */
 
 /* LIGHT MODE */
 /* UNCOMMENT FOR FINAL THEME!!! */
 
-  /* background: linear-gradient( to bottom, #92a2ff, #ffd7a6); 
-  color: #000000; */
+  background: linear-gradient( to bottom, #92a2ff, #ffd7a6); 
+  color: #000000;
 
   overflow: hidden; 
   font-family: sans-serif;
   height: 100vh; 
   margin: 0; 
 }
+
+/* styles.css */
+
+body.dark-mode {
+  background: linear-gradient(to bottom, #000000, #1b014f);
+  color: rgb(247, 247, 247);
+}
+
 
 .brand {
   display: flex;

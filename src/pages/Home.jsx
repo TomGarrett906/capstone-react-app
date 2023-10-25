@@ -4,7 +4,7 @@ import Gigs from "./components/Gigs";
 import Sidebar from "./components/Sidebar";
 
 
-export default function Dashboard() {
+export default function Home() {
     return (
         <Body sidebar={true}>
         
