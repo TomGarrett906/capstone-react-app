@@ -4,18 +4,27 @@ body {
 
   background: linear-gradient(to bottom, #92a2ff, #ffd7a6);
   color: #000000;
-
+  background-size: cover;
   overflow: hidden;
   font-family: sans-serif;
   height: 100vh;
   margin: 0;
 }
 
+.backgroundPicture{
+  position: absolute;
+  background-image: url('./assets/dj-crowd.jpg');
+  background-size: cover;
+  width: 1320px;
+  height: 600px;
+  right: 0px;
+}
 
 
 body.dark-mode {
   background: linear-gradient(to bottom, #000000, #1b014f);
   color: rgb(247, 247, 247);
+ 
 }
 
 .darkModeButton {
@@ -35,13 +44,46 @@ body.dark-mode {
   border-color: #ffffff;
 }
 
+.navItems{
+  color: rgb(255, 255, 255);
+}
+
+.navItems:hover {
+  color: #ffffff;
+  text-shadow: 0 0 4px #ffffff;
+}
+
+.about{
+  color: #ffa200;
+  text-shadow: 0 0 1px rgb(0, 0, 0);
+  display: flex;
+  font-size: smaller;
+  position: relative;
+  left: 750px;
+}
+
+.about:hover{
+  color: #ffffff;
+  text-shadow: 0 0 4px #ffffff;
+}
+
+.sideItems{
+  color: #ffa200;
+  text-shadow: 0 0 1px rgb(0, 0, 0);
+}
+
+.sideItems:hover {
+  color: #ffffff;
+  text-shadow: 0 0 4px rgb(255, 255, 255);
+}
+
 
 .brand {
   display: flex;
   justify-content: flex-start;
   column-gap: 20px;
-  color: #ffa200;
-  text-shadow: 0 0 4px black;
+  color: #ffb300;
+  text-shadow: 0 0 1px rgb(255, 255, 255);
   font-size: xx-large;
   font-family: monospace;
   padding-left: 20px;
@@ -49,7 +91,7 @@ body.dark-mode {
 
 .brand:hover {
   color: white;
-  text-shadow: 0 0 4px black;
+  text-shadow: 0 0 4px rgb(255, 255, 255);
 }
 
 .header {
@@ -58,19 +100,16 @@ body.dark-mode {
   position: relative;
   column-gap: 20px;
   background-color: #4200c59f;
-  color: rgba(255, 255, 255, 0.798);
+  
   font-family: sans-serif;
   padding: 0px;
   min-width: 1260px;
   border-radius: 50px;
-  border-top: #ffffff 1px solid;
-  border-bottom: #ffa200 1px solid;
+  border-top: #ffffff 2px solid;
+  border-bottom: #ffa200 2px solid;
 }
 
-.header:hover {
-  color: #ffffff;
-  text-shadow: 0 0 2px black;
-}
+
 
 .submitButton {
   background-color: #ffa200c4;
@@ -91,9 +130,11 @@ body.dark-mode {
   margin: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size:small;
-  color: #ffffff;
-  padding: 100px;
-  background-image: url('./assets/dj-crowd.jpg'); 
+  color: #ffffffd6;
+  text-shadow: 0 0 4px #ffa200;
+  padding: 40px;
+ 
+   
   background-size: cover;
   background-repeat: no-repeat; 
   border-radius: 10px;
@@ -102,14 +143,18 @@ body.dark-mode {
 .sidebar {
   display: flex;
   min-width: 120px;
-  margin: 5px;
+  margin: 30px;
+  
   top: 60px;
   align-self: flex-start;
-  align-items: start;
+  align-items: center;
   padding-top: 10px;
   row-gap: 10px;
-  border-right: #ffffff 1px dashed;
+  border-top: #ffffff 2px solid;
+  border-bottom: #ffa200 2px solid;
   max-height: 2000px;
+  background: linear-gradient(to bottom, #4a0fc0, rgba(74, 15, 192, 0.384));
+  border-radius: 5%;
 }
 
 .sidebar:hover {
@@ -125,4 +170,53 @@ body.dark-mode {
   margin: 10px;
   align-items:center;
 
+}
+
+.userInfo{
+  background: linear-gradient(to bottom, #ffa20006, #ffa200ac);
+  text-align: center;
+  border-bottom: #000000 1px solid;
+  border-left: #000000 1px solid;
+  border-right: #000000 1px solid;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.userRow{
+  background-color: #ffffff;
+  border: #000000 1px solid;
+  border-radius: 5px;
+  padding: 0px 30px 0px 30px;
+  color: #000000;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  border-radius: 20%;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  max-height: 500px;
+  /* width: 500px; */
+  padding: 20px;
+
+}
+
+.gigTable {
+  background-color: #0000003a;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px;
+  
+  /* border: #000000 1px dotted; */
+}
+
+.gigTableItems {
+  font-size: small;
+  
+  background-color: #a96b007c;
+  
+  border-radius: 3px;
+  
 }

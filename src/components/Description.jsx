@@ -1,6 +1,6 @@
 export default function Description() {
     const descriptionStyle = {
-      textIndent: '2em', // Adjust the value to control the indentation
+      textIndent: '2em', 
     };
 
 
