@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-export default function GigCRUD() {
+export default function GigCRUD({edit}) {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [location, setLocation] = useState("");
   const [dj, setDJ] = useState("");
   const [promoter, setPromoter] = useState("");
-  const [editMode, setEditMode] = useState(false);
+  // const [editMode, setEditMode] = useState(false);
   const [editGig, setEditGig] = useState(null);
   const [gigs, setGigs] = useState([]); // State to store the list of gigs
 
@@ -14,7 +14,7 @@ export default function GigCRUD() {
     // Fetch the list of gigs when the component mounts
     async function fetchGigs() {
       try {
-        const response = await fetch("https://gigtrakr.onrender.com/gigs");
+        const response = await fetch("https://gigtrakr.onrender.com/gig");
         if (response.ok) {
           const data = await response.json();
           setGigs(data);
@@ -68,7 +68,7 @@ export default function GigCRUD() {
   // Function to handle editing a gig
   const editGigHandler = (gig) => {
     setEditGig(gig);
-    setEditMode(true);
+    // setEditMode(true);
   };
 
   // Function to update a gig (PUT request)
@@ -86,7 +86,7 @@ export default function GigCRUD() {
       if (response.ok) {
         // Handle success
         console.log("Gig updated successfully!");
-        setEditMode(false); // Exit edit mode
+        // setEditMode(false); // Exit edit mode
         setEditGig(null); // Clear the edited gig
       } else {
         // Handle error
@@ -120,11 +120,20 @@ export default function GigCRUD() {
     }
   };
 
+function addOrEdit() {
+  if(!edit){ 
+      addGig()
+  } else {
+      editGig()
+  }
+}
+
   return (
     <div>
       <h1>Create New Gig</h1>
       <label>Name of Gig: </label>
       <br />
+      <form onSubmit={addOrEdit}>
       <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
       <br />
       <label>Description: </label>
@@ -147,24 +156,25 @@ export default function GigCRUD() {
       <br />
       <input type="text" value={dj} onChange={(e) => setDJ(e.target.value)} />
       <br />
-      {editMode && (
+      {edit && (
         <div>
           {/* Input fields to edit gig details */}
           <button onClick={updateGig}>Update Gig</button>
         </div>
       )}
-      {!editMode && (
+      {!edit && (
         <div>
           <button onClick={addGig}>Create Gig</button>
         </div>
       )}
+      </form>
       <h1>Gig List</h1>
       {gigs.map((gig) => (
   <div key={gig.id}>
     <p>Name: {gig.name}</p>
     <p>Description: {gig.description}</p>
     {/* Display other gig details here */}
-    {editMode && editGig?.id === gig.id ? (
+    {edit && editGig?.id === gig.id ? (
       <div>
         {/* Input fields to edit gig details */}
         <button onClick={updateGig}>Update Gig</button>

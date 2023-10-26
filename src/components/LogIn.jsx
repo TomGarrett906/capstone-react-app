@@ -11,7 +11,7 @@ import LogInForm from "./forms/LoginForm";
 
 
 
-export default function Register() {
+export default function LogIn() {
   useEffect(()=>{
     if(localStorage.getItem('token') ){
       navigate('/')

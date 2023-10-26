@@ -8,7 +8,7 @@ const Sidebar = () => {
         <Nav.Link href="/mygigs" className="sideItems">My Gigs</Nav.Link>
     </Nav.Item>
     <Nav.Item>
-        <Nav.Link href="/editgigs" className="sideItems">Edit Gigs</Nav.Link>
+        <Nav.Link href="/addgigs" className="sideItems">Add Gigs</Nav.Link>
     </Nav.Item>
     <Nav.Item>
         <Nav.Link href="/account" className="sideItems">Account</Nav.Link>

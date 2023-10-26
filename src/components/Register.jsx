@@ -6,7 +6,7 @@ import Heading from "./components/Heading";
 
 import Users from "./components/Users";
 import Gigs from "./components/Gigs";
-import RegisterForm from './forms/RegisterForm';
+import RegisterForm from './forms/UserForm';
 
 
 
