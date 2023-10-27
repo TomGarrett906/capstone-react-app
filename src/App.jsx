@@ -13,19 +13,22 @@ import FormPage from "./pages/FormPage";
 import DeleteForm from "./components/forms/DeleteForm";
 import Logout from "./components/Logout";
 
+import AddGig from "./pages/AddGig";
+
 function App() {
   return (
     <Container>
       <BrowserRouter>
       <Heading />
+
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<Home />} />
           
-          <Route path='/register' element={<FormPage>
+          <Route path='/user/register' element={<FormPage>
                                             <UserForm edit={false} />
                                           </FormPage>}/>
-          <Route path='/login' element={<FormPage>
+          <Route path='/user/login' element={<FormPage>
                                           <LoginForm />
                                         </FormPage>}/>
 
@@ -39,7 +42,7 @@ function App() {
           <Route path='/logout' element={<Logout />}/>
 
           <Route path="/mygigs" element={<MyGigs />} />
-          <Route path="/addgigs" element={<EditGigs edit={false}/>} />
+          <Route path="/addgig" element={<AddGig edit={false}/>} />
           <Route path="/editgigs" element={<EditGigs edit={true}/>} />
           <Route path="/account" element={<Account />} />
         </Routes>

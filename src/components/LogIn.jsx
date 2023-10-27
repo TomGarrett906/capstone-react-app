@@ -14,8 +14,9 @@ import LogInForm from "./forms/LoginForm";
 export default function LogIn() {
   useEffect(()=>{
     if(localStorage.getItem('token') ){
-      navigate('/')
+      navigate('/user/login')
     }})
+    
   return (
     <Container>
       <Heading />

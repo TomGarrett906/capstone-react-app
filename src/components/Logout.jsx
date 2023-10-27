@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
-import { UserContext } from '../contexts/UserProvider';
+import  UserContext  from '../context/UserProvider';
 
 export default function Logout() {
   const { setUser } = useContext(UserContext);
@@ -10,8 +10,8 @@ export default function Logout() {
   useEffect(() => {
     localStorage.clear();
     setUser({ username: '', token: '' });
-    navigate('/');
+    navigate('/logout');
   }, [navigate, setUser]);
 
   return <Spinner />;
-}
+} 

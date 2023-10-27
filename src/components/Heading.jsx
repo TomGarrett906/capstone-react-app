@@ -11,12 +11,12 @@ export default function Heading() {
           Gig_Trakr
         </Navbar.Brand>
         <Nav.Item>
-          <Nav.Link href="/login" className="navItems">
+          <Nav.Link href="/user/login" className="navItems">
             Log In
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/register" className="navItems">
+          <Nav.Link href="/user/register" className="navItems">
             Register
           </Nav.Link>
         </Nav.Item>
@@ -25,7 +25,17 @@ export default function Heading() {
             About
           </Nav.Link>
         </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={NavLink} to='/delete-user' className="navItems">Delete Profile</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={NavLink} to='/edit-user' className="navItems">Edit Profile</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={NavLink} to='/logout' className="navItems">Logout</Nav.Link>
+          </Nav.Item>
         <DarkMode />
+     
       </Navbar>
     </>
   );
