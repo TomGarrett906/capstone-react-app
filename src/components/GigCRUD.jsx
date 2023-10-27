@@ -14,7 +14,7 @@ export default function GigCRUD({edit}) {
     // Fetch the list of gigs when the component mounts
     async function fetchGigs() {
       try {
-        const response = await fetch("https://gigtrakr.onrender.com/gig");
+        const response = await fetch("http://127.0.0.1:5000/gig");
         if (response.ok) {
           const data = await response.json();
           setGigs(data);
@@ -42,7 +42,7 @@ export default function GigCRUD({edit}) {
 
     // Perform a POST request to add the new gig
     try {
-      const response = await fetch("https://gigtrakr.onrender.com/gig", {
+      const response = await fetch("http://127.0.0.1:5000/gig", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ export default function GigCRUD({edit}) {
   const updateGig = async () => {
     // Perform a PUT request to update the gig
     try {
-      const response = await fetch(`https://gigtrakr.onrender.com/gig/${editGig.id}`, {
+      const response = await fetch(`http://127.0.0.1:5000/${editGig.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -101,7 +101,7 @@ export default function GigCRUD({edit}) {
   const deleteGig = async (gigId) => {
     // Perform a DELETE request to delete the gig
     try {
-      const response = await fetch(`https://gigtrakr.onrender.com/gig/${gigId}`, {
+      const response = await fetch(`http://127.0.0.1:5000/gig/${gigId}`, {
         method: "DELETE",
       });
 

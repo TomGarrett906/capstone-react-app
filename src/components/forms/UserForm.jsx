@@ -14,7 +14,7 @@ export default function UserForm({ edit }) {
     if (!edit && localStorage.getItem('token')) {
       navigate('/user/register');
     }
-  }, );
+  }, []);
 
   async function handleRegisterData(e) {
     e.preventDefault();

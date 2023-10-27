@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Heading from "./components/Heading";
 import UserForm from "./components/forms/UserForm";
 import MyGigs from "./pages/MyGigs";
-import EditGigs from "./pages/EditGigs";
+import EditGig from "./pages/EditGig";
 import LandingPage from "./pages/LandingPage";
 import LoginForm from "./components/forms/LoginForm";
 import Account from "./pages/Account";
@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import FormPage from "./pages/FormPage";
 import DeleteForm from "./components/forms/DeleteForm";
 import Logout from "./components/Logout";
+import DeleteGig from "./pages/DeleteGig";
 
 import AddGig from "./pages/AddGig";
 
@@ -43,8 +44,10 @@ function App() {
 
           <Route path="/mygigs" element={<MyGigs />} />
           <Route path="/addgig" element={<AddGig edit={false}/>} />
-          <Route path="/editgigs" element={<EditGigs edit={true}/>} />
+          <Route path="/editgig" element={<EditGig edit={true}/>} />
+          <Route path="/deletegig" element={<DeleteGig edit={true}/>} />
           <Route path="/account" element={<Account />} />
+          
         </Routes>
       </BrowserRouter>
       <Footer/> 

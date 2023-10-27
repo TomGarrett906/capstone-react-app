@@ -9,26 +9,25 @@ export default function DeleteForm() {
 
   async function handleDeleteData(e) {
     e.preventDefault();
-    console.log('IN DELETE FUNC');
-    const res = await fetch('http://127.0.0.1:5000/user', {
+    const userId = /* Retrieve the user's ID from your user data */ 123; // Replace with the actual user ID
+    const url = `http://127.0.0.1:5000/gig/${userId}`;
+
+    const res = await fetch(url, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('token')}`
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
       body: JSON.stringify({
         username: usernameField.current.value,
-        password: passwordField.current.value
-      })
+        password: passwordField.current.value,
+      }),
     });
+
     if (res.ok) {
-      console.log('good response');
-      const data = await res.json();
-      console.log(data);
       navigate('/logout');
     } else {
       window.alert('Delete Failed');
-      console.log('bad response');
     }
   }
 

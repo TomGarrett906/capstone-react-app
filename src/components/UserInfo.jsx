@@ -1,17 +1,12 @@
+import { useContext } from 'react';
+import UserContext from '../context/UserProvider';
 
-
-export default function UserInfo() {
-  const user = {
-    username: "t.garrett",
-    email: "tom-garrett@email.com",
-    first_name: "Tom",
-    last_name: "Garrett",
-    role: "Promoter",
-  };
+export default function UserInfoTable() {
+  const { user } = useContext(UserContext);
 
   return (
-    <div className="userInfo">
-      <h5>Account Information</h5>
+    <div>
+      <h2>Account Information</h2>
       <table>
         <thead>
           <tr>
@@ -24,11 +19,11 @@ export default function UserInfo() {
         </thead>
         <tbody>
           <tr>
-            <td className="userRow">{user.username}</td>
-            <td className="userRow">{user.email}</td>
-            <td className="userRow">{user.first_name}</td>
-            <td className="userRow">{user.last_name}</td>
-            <td className="userRow">{user.role}</td>
+            <td>{user.username}</td>
+            <td>{user.email}</td>
+            <td>{user.firstName}</td>
+            <td>{user.lastName}</td>
+            <td>{user.role}</td>
           </tr>
         </tbody>
       </table>

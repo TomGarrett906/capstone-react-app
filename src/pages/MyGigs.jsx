@@ -1,10 +1,12 @@
-import Gigs from "../components/Gigs"
 import Body from "../components/Body"
+import GetGigs from "../components/forms/GetGigsForm"
+
 
 export default function MyGigs() {
   return (
     <Body sidebar={true}>
-        <Gigs/>
+       
+      <GetGigs/>
     </Body>
   )
 }
