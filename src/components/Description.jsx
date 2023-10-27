@@ -8,6 +8,7 @@ export default function Description() {
 
   return (
     <div className="description">
+      <h3>The Vision</h3>
     <div style={descriptionStyle}>Welcome to Gig Traker, a platform designed exclusively for DJs and promoters. Say goodbye to the hassle of manual gig payment management and hello to a seamless, automated experience that empowers you to focus on what truly matters - the music.<br></br><br></br>
 
     For DJs, Gig Traker streamlines the payment process, ensuring you receive your hard-earned fees promptly and effortlessly. No more chasing down promoters or dealing with overdue payments. On this platform, you can easily track upcoming gigs, view your payment history, and receive funds directly to your account.<br></br><br></br>

@@ -5,8 +5,8 @@ export default function UserInfoTable() {
   const { user } = useContext(UserContext);
 
   return (
-    <div>
-      <h2>Account Information</h2>
+    <div className='form'>
+      <h4>Account Information</h4>
       <table>
         <thead>
           <tr>

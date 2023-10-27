@@ -9,7 +9,7 @@ export default function DeleteForm() {
 
   async function handleDeleteData(e) {
     e.preventDefault();
-    const userId = /* Retrieve the user's ID from your user data */ 123; // Replace with the actual user ID
+    const userId = userId
     const url = `http://127.0.0.1:5000/gig/${userId}`;
 
     const res = await fetch(url, {
@@ -32,12 +32,12 @@ export default function DeleteForm() {
   }
 
   return (
-    <form onSubmit={handleDeleteData}>
+    <form className='form' onSubmit={handleDeleteData}>
       <label htmlFor="username">Username</label><br />
       <input type="text" name="username" ref={usernameField} required /><br />
       <label htmlFor="password">Password</label><br />
       <input type="password" name="password" ref={passwordField} required /><br />
-      <input type="submit" value="Delete" />
+      <input className='submitButton' type="submit" value="Delete" />
     </form>
   );
 }

@@ -58,12 +58,12 @@ export default function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleLoginData}>
+    <form className='form' onSubmit={handleLoginData}>
       <label htmlFor="username">Username</label><br/>
       <input type="text" name="username" ref={usernameField}/><br/>
       <label htmlFor="password_hash">Password</label><br/>
       <input type="password" name="password_hash" ref={password_hashField} required/><br/>
-      <input type="submit" value="login" />
+      <input className='submitButton' type="submit" value="login" />
     </form>
   );
 }

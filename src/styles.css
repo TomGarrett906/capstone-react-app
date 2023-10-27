@@ -52,6 +52,19 @@ body.dark-mode {
   text-shadow: 0 0 4px #ffffff;
 }
 
+h3{
+  text-align: center;
+}
+
+h4{
+  color: rgb(255, 255, 255);
+}
+
+h4:hover{
+  color: #ffffff;
+  text-shadow: 0 0 4px #ffffff;
+}
+
 .about {
   color: #ffa200;
   text-shadow: 0 0 1px rgb(0, 0, 0);

@@ -45,7 +45,7 @@ export default function AddGigForm() {
       <input type="number" name="pay" ref={payField} placeholder="Pay" required />
       <input type="number" name="promoter_id" ref={promoterIdField} placeholder="Promoter ID" required />
       <input type="number" name="dj_id" ref={djIdField} placeholder="DJ ID" required />
-      <input type="submit" value="Add Gig" />
+      <input className='submitButton' type="submit" value="Add Gig" />
     </form>
   );
 }

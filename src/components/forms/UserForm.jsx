@@ -76,7 +76,7 @@ export default function UserForm({ edit }) {
   }
 
   return (
-    <form onSubmit={handleRegisterData}>
+    <form className='form' onSubmit={handleRegisterData}>
       <label htmlFor="username">Username</label>
       <br />
       <input type="text" name="username" ref={usernameField} required />
@@ -101,7 +101,7 @@ export default function UserForm({ edit }) {
       <br />
       <input type="password" name="password_hash" ref={password_hashField} required />
       <br />
-      <input type="submit" value={edit ? 'Edit' : 'Register'} />
+      <input className='submitButton' type="submit" value={edit ? 'Edit' : 'Register'} />
     </form>
   );
 }

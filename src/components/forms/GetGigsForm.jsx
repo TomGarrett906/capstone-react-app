@@ -22,7 +22,7 @@ export default function GetGigs() {
   }, []);
 
   return (
-    <div>
+    <div className="form">
       <h4>My Gigs</h4>
       <table>
         <thead>

@@ -28,7 +28,7 @@ export default function Heading() {
 
         <Nav.Item>
           <Nav.Link href="/" className="about navItems">
-            About
+            Vision
           </Nav.Link>
         </Nav.Item>
 

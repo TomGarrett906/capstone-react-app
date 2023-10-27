@@ -50,7 +50,7 @@ export default function DeleteGig() {
   }
 
   return (
-    <div>
+    <div className="form">
       <h4>Delete Gig</h4>
       <select value={gigToDelete} onChange={(e) => setGigToDelete(e.target.value)}>
         <option value="">Select a Gig to Delete</option>
@@ -60,7 +60,7 @@ export default function DeleteGig() {
           </option>
         ))}
       </select>
-      <button onClick={handleDelete}>Delete Gig</button>
+      <button className='submitButton' onClick={handleDelete}>Delete Gig</button>
       {message && (
         <p className={success ? "success" : "error"}>{message}</p>
       )}
