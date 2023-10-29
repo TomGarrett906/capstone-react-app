@@ -3,16 +3,20 @@ import Nav from "react-bootstrap/Nav";
 import DarkMode from "./DarkMode";
 import { NavLink } from "react-router-dom";
 
+
 export default function Heading() {
+  // const { user, logout } = useAuth();
+
+
   return (
-    <>
+    <div>
       <Navbar sticky="top" className="header">
         <Navbar.Brand as={NavLink} to="/home" className="brand">
           Gig_Trakr
         </Navbar.Brand>
         
-
-        
+        {/* {user ? ( */}
+        <>
         <Nav.Item>
           <Nav.Link href="/user/login" className="navItems">
             Log In
@@ -23,9 +27,9 @@ export default function Heading() {
             Register
           </Nav.Link>
         </Nav.Item>
-
-
-
+</>
+    {/* // ) : ( */}
+<>
         <Nav.Item>
           <Nav.Link href="/" className="about navItems">
             Vision
@@ -43,13 +47,13 @@ export default function Heading() {
           <Nav.Item>
             <Nav.Link as={NavLink} to='/logout' className="navItems">Logout</Nav.Link>
           </Nav.Item>
-
-
+</>
+        {/* )} */}
 
 
         <DarkMode />
      
       </Navbar>
-    </>
+    </div>
   );
 }

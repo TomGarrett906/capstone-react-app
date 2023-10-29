@@ -10,7 +10,7 @@ export default function Logout() {
   useEffect(() => {
     localStorage.clear();
     setUser({ username: '', token: '' });
-    navigate('/');
+    navigate('/user/login');
   }, [navigate, setUser]);
 
   return <Spinner />;
