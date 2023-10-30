@@ -28,5 +28,5 @@ export default function UserInfoTable() {
         </tbody>
       </table>
     </div>
-  );
+  ); 
 }

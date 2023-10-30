@@ -4,7 +4,7 @@ import turnTableImage from '../assets/turn-table.jpg';
 import djMoney from '../assets/dj-money.png';
 
 export default function CustomCarousel() {
-  // Define an array of image URLs that you can later add or fetch from your data source.
+ 
   const imageUrls = [handShakeImage, turnTableImage, djMoney];
 
   return (

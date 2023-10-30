@@ -1,9 +1,7 @@
-// EditGigForm.jsx
-
 import { useRef, useEffect } from "react";
 
 export default function EditGigForm({ gigData, onSubmit }) {
-  const gigIdField = useRef(null); // Adding the gig_id field
+  const gigIdField = useRef(null);
   const gigNameField = useRef(null);
   const descriptionField = useRef(null);
   const dateField = useRef(null);
@@ -14,7 +12,7 @@ export default function EditGigForm({ gigData, onSubmit }) {
 
   useEffect(() => {
     if (gigData) {
-      gigIdField.current.value = gigData.gig_id; // Set the gig_id value
+      gigIdField.current.value = gigData.gig_id; 
       gigNameField.current.value = gigData.gig_name;
       descriptionField.current.value = gigData.description;
       dateField.current.value = gigData.date;
@@ -28,7 +26,7 @@ export default function EditGigForm({ gigData, onSubmit }) {
   async function editGig(e) {
     e.preventDefault();
     const updatedGig = {
-      gig_id: gigIdField.current.value, // Include the gig_id in the updated data
+      gig_id: gigIdField.current.value,
       gig_name: gigNameField.current.value,
       description: descriptionField.current.value,
       date: dateField.current.value,
@@ -39,10 +37,10 @@ export default function EditGigForm({ gigData, onSubmit }) {
     };
 
     if (typeof onSubmit === 'function') {
-      onSubmit(gigIdField.current.value, updatedGig); // Passing gig_id and updated data to onSubmit
+      onSubmit(gigIdField.current.value, updatedGig); 
     }
 
-    // Clear the form after submission
+    
     gigIdField.current.value = "";
     gigNameField.current.value = "";
     descriptionField.current.value = "";

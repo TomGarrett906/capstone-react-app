@@ -9,7 +9,7 @@ export default function DeleteGig() {
   useEffect(() => {
     async function fetchGigs() {
       try {
-        const response = await fetch("http://127.0.0.1:5000/gig"); // Replace with your API endpoint
+        const response = await fetch("http://127.0.0.1:5000/gig");
         if (response.ok) {
           const data = await response.json();
           setGigs(data);
@@ -36,13 +36,13 @@ export default function DeleteGig() {
       if (response.ok) {
         setSuccess(true);
         setMessage("Gig deleted successfully.");
-        // You can also update the list of gigs if needed.
+
       } else {
         setSuccess(false);
         setMessage("Invalid User");
       }
 
-      // Clear the selected gig to delete.
+   
       setGigToDelete("");
     } catch (error) {
       console.error("Network request error:", error);

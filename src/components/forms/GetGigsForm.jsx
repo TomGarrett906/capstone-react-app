@@ -6,7 +6,7 @@ export default function GetGigs() {
   useEffect(() => {
     async function fetchGigs() {
       try {
-        const response = await fetch("http://127.0.0.1:5000/gig"); // Replace with your API endpoint
+        const response = await fetch("http://127.0.0.1:5000/gig");
         if (response.ok) {
           const data = await response.json();
           setGigs(data);
